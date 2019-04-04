@@ -97,3 +97,11 @@ services:
       - monitor-net
     restart: always
 
+  metrics:
+    image: infinityworks/docker-hub-exporter
+    ports:
+      - 9170:9170
+    environment:
+      - "IMAGES=homedepottech/github-webhook-resource"
+    networks:
+      - monitor-net
