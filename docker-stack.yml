@@ -102,6 +102,6 @@ services:
     ports:
       - 9170:9170
     environment:
-      - "IMAGES=homedepottech/github-webhook-resource"
+      - "IMAGES=homedepottech/github-webhook-resource, library/ubuntu, library/alpine, google/cadvisor"
     networks:
       - monitor-net
